@@ -13,7 +13,8 @@ const Index = () => {
       image: "/img/8d715b3a-55dc-44da-9f14-882e8a8abffa.jpg",
       owner: "Анна К.",
       donations: 15420,
-      status: "В поиске виртуального хозяина"
+      status: "В поиске виртуального хозяина",
+      likes: 247
     },
     {
       id: 2,
@@ -23,7 +24,8 @@ const Index = () => {
       image: "/img/f82f72db-cf08-4ddf-9f57-df407edb0c74.jpg",
       owner: "Михаил Р.",
       donations: 8750,
-      status: "Активно общается"
+      status: "Активно общается",
+      likes: 189
     },
     {
       id: 3,
@@ -33,7 +35,8 @@ const Index = () => {
       image: "/img/308f44a1-d65e-4ad6-8574-1c133814d17b.jpg",
       owner: "Елена В.",
       donations: 3200,
-      status: "Новичок на платформе"
+      status: "Новичок на платформе",
+      likes: 98
     }
   ];
 
@@ -116,12 +119,22 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {pets.map((pet) => (
               <Card key={pet.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="aspect-square overflow-hidden">
+                <div className="aspect-square overflow-hidden relative group">
                   <img 
                     src={pet.image} 
                     alt={pet.name}
                     className="w-full h-full object-cover"
                   />
+                  
+                  {/* Voting overlay */}
+                  <div className="absolute top-3 right-3 flex flex-col space-y-2">
+                    <button className="bg-black/50 backdrop-blur-sm rounded-full p-2 text-white hover:bg-black/70 transition-all group-hover:scale-110">
+                      <Icon name="Heart" size={20} className="text-red-400" />
+                    </button>
+                    <span className="text-white text-xs font-semibold bg-black/50 backdrop-blur-sm rounded-full px-2 py-1 text-center">
+                      {pet.likes}
+                    </span>
+                  </div>
                 </div>
                 
                 <CardHeader className="pb-3">

@@ -166,76 +166,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Donations & Gifts Section */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            
-            {/* Donations */}
-            <div>
-              <h2 className="text-3xl font-inter font-semibold mb-8 text-center">
-                Поддержите донатом
-              </h2>
-              
-              <Card className="p-6">
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <Button variant="outline" className="h-16 text-lg font-semibold">
-                    100 ₽
-                  </Button>
-                  <Button variant="outline" className="h-16 text-lg font-semibold">
-                    300 ₽
-                  </Button>
-                  <Button variant="outline" className="h-16 text-lg font-semibold">
-                    500 ₽
-                  </Button>
-                  <Button className="h-16 text-lg font-semibold">
-                    1000 ₽
-                  </Button>
-                </div>
-                
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-muted-foreground">Всего донатов сегодня:</span>
-                    <span className="font-semibold text-primary">27,340 ₽</span>
-                  </div>
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-muted-foreground">Помогли питомцам:</span>
-                    <span className="font-semibold">156</span>
-                  </div>
-                </div>
-              </Card>
-            </div>
 
-            {/* Gifts */}
-            <div>
-              <h2 className="text-3xl font-inter font-semibold mb-8 text-center">
-                Отправить подарок
-              </h2>
-              
-              <div className="space-y-3">
-                {gifts.map((gift, index) => (
-                  <Card key={index} className="p-4 hover:shadow-md transition-shadow cursor-pointer">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                          <Icon name={gift.icon as any} size={20} className="text-primary" />
-                        </div>
-                        <span className="font-medium">{gift.name}</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <span className="font-semibold text-primary">{gift.price} ₽</span>
-                        <Button size="sm">
-                          <Icon name="ShoppingCart" size={16} />
-                        </Button>
-                      </div>
-                    </div>
-                  </Card>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Chat Section */}
       <section className="py-16 px-4 bg-secondary/20">

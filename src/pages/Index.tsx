@@ -50,8 +50,8 @@ const Index = () => {
       <nav className="border-b border-border bg-card/50 backdrop-blur">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <Icon name="Heart" className="text-primary" size={32} />
+            <div className="flex items-center space-x-3">
+              <img src="/img/53eaa0a4-284c-4248-a288-84c9dc0b20bb.jpg" alt="SatoPet Logo" className="w-10 h-10 rounded-lg" />
               <span className="text-2xl font-inter font-bold text-foreground">SatoPet</span>
             </div>
             
@@ -282,7 +282,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <Icon name="Heart" className="text-primary" size={28} />
+                <img src="/img/53eaa0a4-284c-4248-a288-84c9dc0b20bb.jpg" alt="SatoPet Logo" className="w-8 h-8 rounded-md" />
                 <span className="text-xl font-inter font-bold">SatoPet</span>
               </div>
               <p className="text-muted-foreground text-sm">
